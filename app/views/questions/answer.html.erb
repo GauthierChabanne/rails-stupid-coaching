@@ -1,0 +1,13 @@
+<h1>Stupid Coaching</h1>
+
+<h2><%= @answer %> <br><em>-You</em></h2>
+
+<% if @answer.downcase == "i am going to work" || "i'm going to work" %>
+  <h2>Great ! <br><em>-Your coach</em></h2>
+<% elsif @answer.downcase.chars.include? "?"%>
+  <h2>Silly question, get dressed and go to work!<br><em>-Your coach</em></h2>
+<% else %>
+  <h2>I don't care, get dressed and go to work!<br><em>-Your coach</em><</h2>
+<% end %>
+
+<%= link_to "Ask a new question", ask_path %>
